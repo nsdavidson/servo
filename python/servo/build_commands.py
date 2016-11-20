@@ -160,6 +160,7 @@ class MachCommands(CommandBase):
     def build(self, target=None, release=False, dev=False, jobs=None,
               features=None, android=None, verbose=False, debug_mozjs=False, params=None,
               with_debug_assertions=False):
+        verbose = True
         if android is None:
             android = self.config["build"]["android"]
         features = features or self.servo_features()
